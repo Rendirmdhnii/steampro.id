@@ -14,26 +14,13 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  // Profit simulator state (optional value-add, but keeping calculations simple and precise as requested)
-  const [uapVolume, setUapVolume] = useState<number>(20); // default 20 kg/hari
-  const [laundryVolume, setLaundryVolume] = useState<number>(50); // default 50 kg/hari
-
   // Active FAQ index
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
-
-  // WhatsApp click handler
-  const handleWhatsAppClick = (packageName?: string) => {
-    const text = packageName
-      ? `Halo SteamPro.id, saya tertarik dengan "${packageName}". Boleh minta info selengkapnya?`
-      : "Halo SteamPro.id, saya ingin berkonsultasi mengenai paket usaha laundry & setrika uap.";
-    const encodedText = encodeURIComponent(text);
-    window.open(`https://wa.me/6281234567890?text=${encodedText}`, "_blank");
-  };
 
   const faqs = [
     {
       question: "Apakah peralatan setrika uap & laundry sudah siap pakai?",
-      answer: "Ya, betul sekali. Semua paket usaha dari SteamPro.id sudah dirancang dengan konsep 'Plug and Play'. Kami menyediakan semua peralatan lengkap, instalasi awal, parfum, deterjen, serta panduan operasional agar Anda dapat langsung memulai usaha tanpa ribet."
+      answer: "Ya, betul sekali. Semua paket usaha dari TukangLaundry.co.id sudah dirancang dengan konsep 'Plug and Play'. Kami menyediakan semua peralatan lengkap, instalasi awal, parfum, deterjen, serta panduan operasional agar Anda dapat langsung memulai usaha tanpa ribet."
     },
     {
       question: "Bagaimana dengan pengiriman dan instalasi ke luar kota?",
@@ -56,7 +43,7 @@ export default function Home() {
               <Cloud className="w-5 h-5" />
             </div>
             <span className="text-lg font-extrabold tracking-tight text-blue-900">
-              SteamPro.id
+              TukangLaundry.co.id
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm font-bold text-slate-600">
@@ -66,13 +53,15 @@ export default function Home() {
             <a href="#faq" className="hover:text-blue-900 transition-colors">FAQ</a>
           </nav>
           <div>
-            <button 
-              onClick={() => handleWhatsAppClick()}
+            <a 
+              href="https://wa.me/6289678449424"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-blue-900 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shadow-md hover:bg-blue-800 transition-colors flex items-center gap-1.5"
             >
               <Phone className="w-3.5 h-3.5" />
               <span>Hubungi CS</span>
-            </button>
+            </a>
           </div>
         </div>
       </header>
@@ -83,7 +72,7 @@ export default function Home() {
           {/* Logo Placeholder */}
           <div className="flex items-center justify-center gap-2 mb-6">
             <Cloud className="w-8 h-8 text-blue-900" />
-            <span className="text-2xl font-black tracking-tight text-blue-900">SteamPro.id</span>
+            <span className="text-2xl font-black tracking-tight text-blue-900">TukangLaundry.co.id</span>
           </div>
 
           {/* Judul Utama */}
@@ -132,37 +121,37 @@ export default function Home() {
           {/* Catalog Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
             
-            {/* Kartu 1: Paket Starter */}
+            {/* Kartu 1: PAKET VERSA */}
             <div className="flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden group">
               {/* Judul dengan Background Biru Tua */}
               <div className="bg-blue-900 text-white p-4 font-black text-center text-sm sm:text-base tracking-wide uppercase">
-                PAKET STARTER SETRIKA UAP
+                PAKET VERSA
               </div>
               <div className="p-5 sm:p-6 flex-1 flex flex-col">
-                <p className="text-xs font-semibold text-slate-500 text-center mb-4">Cocok untuk Pemula</p>
+                <p className="text-xs font-semibold text-slate-500 text-center mb-4">Usaha Laundry Kiloan</p>
                 
                 {/* Gray Placeholder Image */}
                 <div className="w-full h-48 bg-slate-200 rounded-xl flex flex-col items-center justify-center text-slate-400 font-bold mb-6 select-none border border-slate-300/50">
                   <Cloud className="w-10 h-10 mb-1" />
-                  <span className="text-xs">Gambar Starter Pack</span>
-                  <span className="text-[10px] opacity-75">1.5 JT Starter Setrika</span>
+                  <span className="text-xs">Gambar Paket Versa</span>
+                  <span className="text-[10px] opacity-75">13 JT Paket Versa</span>
                 </div>
 
                 {/* Price Box */}
                 <div className="text-center mb-6">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">HARGA PROMO</span>
-                  <span className="text-2xl sm:text-3xl font-black text-blue-900">MULAI DARI 1,5 JT</span>
+                  <span className="text-2xl sm:text-3xl font-black text-blue-900">Rp 13.000.000</span>
                 </div>
 
                 {/* Features List */}
                 <div className="space-y-3 mb-6 flex-1">
                   {[
-                    "Setrika Uap Portable",
-                    "Meja Setrika",
-                    "Gantungan Baju",
-                    "Selang Uap Tambahan",
-                    "Panduan Penggunaan",
-                    "Grup Konsultasi"
+                    "Mesin Pengering Gas 9Kg",
+                    "Setrika Uap Boiler 10L",
+                    "Timbangan Digital & Gantung",
+                    "Perlengkapan Laundry (Keranjang, Hanger, Nota)",
+                    "Paket Chemical 5L",
+                    "Media Promo (Brosur, Banner)"
                   ].map((feature, index) => (
                     <div key={index} className="flex items-start gap-2.5 text-xs sm:text-sm">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -172,98 +161,49 @@ export default function Home() {
                 </div>
 
                 {/* CTA Button */}
-                <button
-                  onClick={() => handleWhatsAppClick("PAKET STARTER SETRIKA UAP")}
-                  className="w-full bg-blue-900 text-white py-3 rounded-xl font-bold hover:bg-blue-800 transition-colors text-sm uppercase tracking-wider"
+                <a
+                  href="https://wa.me/6289678449424"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-blue-900 text-white py-3 rounded-xl font-bold hover:bg-blue-800 transition-colors text-sm uppercase tracking-wider text-center"
                 >
-                  SIAP PAKAI
-                </button>
+                  Pesan Paket Versa
+                </a>
               </div>
             </div>
 
-            {/* Kartu 2: Paket Premium */}
+            {/* Kartu 2: PAKET MINIBAR */}
             <div className="flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden group">
               {/* Judul dengan Background Biru Tua */}
               <div className="bg-blue-900 text-white p-4 font-black text-center text-sm sm:text-base tracking-wide uppercase">
-                PAKET PREMIUM SETRIKA UAP
+                PAKET MINIBAR
               </div>
               <div className="p-5 sm:p-6 flex-1 flex flex-col">
-                <p className="text-xs font-semibold text-slate-500 text-center mb-4">Usaha Rumahan Lebih Profesional</p>
+                <p className="text-xs font-semibold text-slate-500 text-center mb-4">Usaha Laundry Kiloan (Lebih Lengkap)</p>
                 
                 {/* Gray Placeholder Image */}
                 <div className="w-full h-48 bg-slate-200 rounded-xl flex flex-col items-center justify-center text-slate-400 font-bold mb-6 select-none border border-slate-300/50">
                   <Cloud className="w-10 h-10 mb-1" />
-                  <span className="text-xs">Gambar Premium Pack</span>
-                  <span className="text-[10px] opacity-75">2.9 JT Premium Boiler</span>
+                  <span className="text-xs">Gambar Paket Minibar</span>
+                  <span className="text-[10px] opacity-75">25.3 JT Paket Minibar</span>
                 </div>
 
                 {/* Price Box */}
                 <div className="text-center mb-6">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">HARGA PROMO</span>
-                  <span className="text-2xl sm:text-3xl font-black text-blue-900">MULAI DARI 2,9 JT</span>
+                  <span className="text-2xl sm:text-3xl font-black text-blue-900">Rp 25.300.000</span>
                 </div>
 
                 {/* Features List */}
                 <div className="space-y-3 mb-6 flex-1">
                   {[
-                    "Setrika Uap Boiler",
-                    "Meja Setrika Premium",
-                    "Gantungan Baju Stainless",
-                    "Selang Uap Anti Panas",
-                    "Parfum Laundry 1L",
-                    "Panduan & Training Online",
-                    "Grup Konsultasi"
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-start gap-2.5 text-xs sm:text-sm">
-                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span className="text-slate-700 font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* CTA Button */}
-                <button
-                  onClick={() => handleWhatsAppClick("PAKET PREMIUM SETRIKA UAP")}
-                  className="w-full bg-blue-900 text-white py-3 rounded-xl font-bold hover:bg-blue-800 transition-colors text-sm uppercase tracking-wider"
-                >
-                  LEBIH CEPAT & RAPI
-                </button>
-              </div>
-            </div>
-
-            {/* Kartu 3: Paket Laundry Lengkap */}
-            <div className="flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden group">
-              {/* Judul dengan Background Biru Tua */}
-              <div className="bg-blue-900 text-white p-4 font-black text-center text-sm sm:text-base tracking-wide uppercase">
-                PAKET LAUNDRY LENGKAP
-              </div>
-              <div className="p-5 sm:p-6 flex-1 flex flex-col">
-                <p className="text-xs font-semibold text-slate-500 text-center mb-4">Usaha Laundry Siap Jalan</p>
-                
-                {/* Gray Placeholder Image */}
-                <div className="w-full h-48 bg-slate-200 rounded-xl flex flex-col items-center justify-center text-slate-400 font-bold mb-6 select-none border border-slate-300/50">
-                  <Cloud className="w-10 h-10 mb-1" />
-                  <span className="text-xs">Gambar Laundry Lengkap</span>
-                  <span className="text-[10px] opacity-75">12.9 JT Complete Set</span>
-                </div>
-
-                {/* Price Box */}
-                <div className="text-center mb-6">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">HARGA PROMO</span>
-                  <span className="text-2xl sm:text-3xl font-black text-blue-900">MULAI DARI 12,9 JT</span>
-                </div>
-
-                {/* Features List */}
-                <div className="space-y-3 mb-6 flex-1">
-                  {[
-                    "2 Unit Mesin Cuci",
-                    "1 Unit Pengering",
-                    "Setrika Uap Boiler + Meja Setrika",
-                    "Rak Laundry & Meja Lipat",
+                    "Mesin Cuci LG Front Loading 7kg",
+                    "Mesin Pengering Gas 9Kg",
+                    "Setrika Uap Boiler 10L",
+                    "Meja Front Office & Rak Kayu",
                     "Timbangan Digital",
-                    "Perlengkapan Laundry Lengkap",
-                    "Training & SOP Usaha Laundry",
-                    "Desain Banner & Branding"
+                    "Paket Chemical 10L",
+                    "Media Promo Lengkap"
                   ].map((feature, index) => (
                     <div key={index} className="flex items-start gap-2.5 text-xs sm:text-sm">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -273,12 +213,66 @@ export default function Home() {
                 </div>
 
                 {/* CTA Button */}
-                <button
-                  onClick={() => handleWhatsAppClick("PAKET LAUNDRY LENGKAP")}
-                  className="w-full bg-blue-900 text-white py-3 rounded-xl font-bold hover:bg-blue-800 transition-colors text-sm uppercase tracking-wider"
+                <a
+                  href="https://wa.me/6289678449424"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-blue-900 text-white py-3 rounded-xl font-bold hover:bg-blue-800 transition-colors text-sm uppercase tracking-wider text-center"
                 >
-                  SIAP JALAN & PROFESIONAL
-                </button>
+                  Pesan Paket Minibar
+                </a>
+              </div>
+            </div>
+
+            {/* Kartu 3: PAKET MASTER */}
+            <div className="flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden group">
+              {/* Judul dengan Background Biru Tua */}
+              <div className="bg-blue-900 text-white p-4 font-black text-center text-sm sm:text-base tracking-wide uppercase">
+                PAKET MASTER
+              </div>
+              <div className="p-5 sm:p-6 flex-1 flex flex-col">
+                <p className="text-xs font-semibold text-slate-500 text-center mb-4">Laundry Kiloan, Satuan & Dryclean</p>
+                
+                {/* Gray Placeholder Image */}
+                <div className="w-full h-48 bg-slate-200 rounded-xl flex flex-col items-center justify-center text-slate-400 font-bold mb-6 select-none border border-slate-300/50">
+                  <Cloud className="w-10 h-10 mb-1" />
+                  <span className="text-xs">Gambar Paket Master</span>
+                  <span className="text-[10px] opacity-75">40 JT Paket Master</span>
+                </div>
+
+                {/* Price Box */}
+                <div className="text-center mb-6">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">HARGA PROMO</span>
+                  <span className="text-2xl sm:text-3xl font-black text-blue-900">Rp 40.000.000</span>
+                </div>
+
+                {/* Features List */}
+                <div className="space-y-3 mb-6 flex-1">
+                  {[
+                    "2 Unit Mesin Cuci LG",
+                    "Pengering SpeedQueen 10,5Kg",
+                    "Vertical Steamer",
+                    "Meja Front Office & Rak Kayu",
+                    "Tablet Android Kasir + Printer Bluetooth",
+                    "Aplikasi Cloud Kasir",
+                    "Paket Chemical Lengkap"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-start gap-2.5 text-xs sm:text-sm">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span className="text-slate-700 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA Button */}
+                <a
+                  href="https://wa.me/6289678449424"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-blue-900 text-white py-3 rounded-xl font-bold hover:bg-blue-800 transition-colors text-sm uppercase tracking-wider text-center"
+                >
+                  Pesan Paket Master
+                </a>
               </div>
             </div>
 
@@ -291,179 +285,64 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
             <h2 className="text-xs font-black uppercase tracking-widest text-blue-900 mb-2">SIMULASI OMSET</h2>
-            <p className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Perkiraan Omset & Laba Bersih</p>
-            <p className="mt-3 text-slate-500 text-xs sm:text-sm">
-              Sesuaikan kapasitas harian menggunakan slider di bawah untuk memperkirakan keuntungan bulanan Anda.
-            </p>
+            <p className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Simulasi Usaha Laundry</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            {/* Kartu 1: Simulasi Setrika Uap */}
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-              <div className="bg-blue-900 text-white p-4 font-bold text-center text-sm sm:text-base uppercase tracking-wide">
-                SIMULASI OMSET USAHA SETRIKA UAP
+          {/* Single Large Card */}
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <div className="bg-blue-900 text-white p-5 font-bold text-center text-sm sm:text-base uppercase tracking-wide">
+              SIMULASI USAHA LAUNDRY
+            </div>
+            <div className="p-5 sm:p-8 space-y-6 flex-1 flex flex-col">
+              <div className="text-center bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <p className="text-xs sm:text-sm md:text-base font-extrabold text-blue-900">
+                  Target 80kg/hari | Harga Jual Rp 7.000/kg | 30 Hari Kerja
+                </p>
               </div>
-              <div className="p-5 sm:p-6 space-y-6 flex-1 flex flex-col">
-                <p className="text-xs text-slate-400 font-semibold text-center uppercase tracking-wider">Kapasitas Harian (Contoh: 20 KG/HARI)</p>
-                
-                {/* Interactive Slider */}
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs sm:text-sm font-bold text-slate-700">Volume Cucian Harian</span>
-                    <span className="text-sm sm:text-base font-black text-blue-900 bg-blue-50 px-2.5 py-0.5 rounded">
-                      {uapVolume} KG / HARI
-                    </span>
-                  </div>
-                  <input
-                    type="range"
-                    min="10"
-                    max="100"
-                    step="5"
-                    value={uapVolume}
-                    onChange={(e) => setUapVolume(Number(e.target.value))}
-                    className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-900"
-                  />
-                  <div className="flex justify-between text-[10px] text-slate-400 mt-1 font-bold">
-                    <span>10 KG</span>
-                    <span>100 KG</span>
-                  </div>
-                </div>
 
-                {/* Financial Table / List (Overflow Safe) */}
-                <div className="overflow-x-auto">
-                  <div className="min-w-full divide-y divide-slate-100 text-xs sm:text-sm">
-                    {/* Pendapatan */}
-                    <div className="py-3 flex justify-between gap-4 items-center">
-                      <div>
-                        <span className="font-bold text-slate-800 block">Pendapatan Jasa</span>
-                        <span className="text-[10px] text-slate-400">Rp 4.000 / kg</span>
-                      </div>
-                      <div className="text-right">
-                        <span className="text-slate-500 block">Rp {(uapVolume * 4000).toLocaleString("id-ID")}/hari</span>
-                        <span className="font-bold text-slate-900">Rp {(uapVolume * 4000 * 30).toLocaleString("id-ID")}/bulan</span>
-                      </div>
+              {/* Pemasukan & Pengeluaran Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                {/* Rincian Pemasukan */}
+                <div className="space-y-4">
+                  <h3 className="text-xs font-black uppercase tracking-widest text-emerald-600">Rincian Pemasukan</h3>
+                  <div className="space-y-3 text-xs sm:text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-slate-600">Pemasukan Kiloan</span>
+                      <span className="font-bold text-slate-900">Rp 16.800.000</span>
                     </div>
-
-                    {/* Pengeluaran */}
-                    <div className="py-3 space-y-2">
-                      <span className="font-bold text-[10px] text-slate-400 uppercase tracking-widest block">Pengeluaran:</span>
-                      
-                      <div className="flex justify-between text-slate-600">
-                        <span>Listrik/Air/Deterjen</span>
-                        <span className="font-bold">Rp {Math.round(400000 * (uapVolume / 20)).toLocaleString("id-ID")}</span>
-                      </div>
-                      
-                      <div className="flex justify-between text-slate-600">
-                        <span>Parfum/Plastik</span>
-                        <span className="font-bold">Rp {Math.round(300000 * (uapVolume / 20)).toLocaleString("id-ID")}</span>
-                      </div>
-
-                      <div className="flex justify-between text-slate-800 pt-2 font-bold border-t border-slate-100/50">
-                        <span>Total Pengeluaran</span>
-                        <span className="text-red-600">- Rp {(Math.round(400000 * (uapVolume / 20)) + Math.round(300000 * (uapVolume / 20))).toLocaleString("id-ID")}</span>
-                      </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-600">Pemasukan Satuan & Bedcover</span>
+                      <span className="font-bold text-slate-900">Rp 6.000.000</span>
+                    </div>
+                    <div className="flex justify-between border-t border-slate-100 pt-3 font-extrabold text-slate-800">
+                      <span>Total Pemasukan</span>
+                      <span className="text-blue-900">Rp 22.800.000</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Full-width Laba Bersih Box */}
-                <div className="mt-auto bg-blue-900 text-white p-4 rounded-xl text-center shadow-sm">
-                  <span className="text-[9px] font-bold tracking-widest uppercase text-blue-200 block mb-1">
-                    ESTIMASI LABA BERSIH
-                  </span>
-                  <span className="text-base sm:text-lg font-black tracking-tight block">
-                    Rp {(uapVolume * 4000 * 30 - (Math.round(400000 * (uapVolume / 20)) + Math.round(300000 * (uapVolume / 20)))).toLocaleString("id-ID")} / BULAN
-                  </span>
+                {/* Rincian Pengeluaran */}
+                <div className="space-y-4 pt-6 md:pt-0 md:pl-6">
+                  <h3 className="text-xs font-black uppercase tracking-widest text-red-600">Rincian Pengeluaran</h3>
+                  <div className="space-y-3 text-xs sm:text-sm">
+                    <div className="flex justify-between gap-4">
+                      <span className="text-slate-600 leading-tight">Total Pengeluaran</span>
+                      <span className="font-bold text-red-600 shrink-0">Rp 13.730.000</span>
+                    </div>
+                    <p className="text-[10px] text-slate-400 italic leading-tight">
+                      (Termasuk biaya operasional: Listrik, Air, Gaji 4 Karyawan, Sewa Tempat, dll)
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              {/* Laba Bersih (Box Biru Tua full width di dalam kartu) */}
+              <div className="bg-blue-900 text-white p-4 rounded-xl text-center shadow-md">
+                <span className="text-xs sm:text-sm font-black tracking-wider uppercase block">
+                  ESTIMASI KEUNTUNGAN BERSIH: Rp 9.070.000 / BULAN
+                </span>
               </div>
             </div>
-
-            {/* Kartu 2: Simulasi Laundry Kiloan */}
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-              <div className="bg-blue-900 text-white p-4 font-bold text-center text-sm sm:text-base uppercase tracking-wide">
-                SIMULASI OMSET USAHA LAUNDRY KILOAN
-              </div>
-              <div className="p-5 sm:p-6 space-y-6 flex-1 flex flex-col">
-                <p className="text-xs text-slate-400 font-semibold text-center uppercase tracking-wider">Kapasitas Harian (Contoh: 50 KG/HARI)</p>
-                
-                {/* Interactive Slider */}
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs sm:text-sm font-bold text-slate-700">Volume Cucian Harian</span>
-                    <span className="text-sm sm:text-base font-black text-blue-900 bg-blue-50 px-2.5 py-0.5 rounded">
-                      {laundryVolume} KG / HARI
-                    </span>
-                  </div>
-                  <input
-                    type="range"
-                    min="20"
-                    max="200"
-                    step="10"
-                    value={laundryVolume}
-                    onChange={(e) => setLaundryVolume(Number(e.target.value))}
-                    className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-900"
-                  />
-                  <div className="flex justify-between text-[10px] text-slate-400 mt-1 font-bold">
-                    <span>20 KG</span>
-                    <span>200 KG</span>
-                  </div>
-                </div>
-
-                {/* Financial Table / List (Overflow Safe) */}
-                <div className="overflow-x-auto">
-                  <div className="min-w-full divide-y divide-slate-100 text-xs sm:text-sm">
-                    {/* Pendapatan */}
-                    <div className="py-3 flex justify-between gap-4 items-center">
-                      <div>
-                        <span className="font-bold text-slate-800 block">Pendapatan Jasa</span>
-                        <span className="text-[10px] text-slate-400">Rp 6.000 / kg</span>
-                      </div>
-                      <div className="text-right">
-                        <span className="text-slate-500 block">Rp {(laundryVolume * 6000).toLocaleString("id-ID")}/hari</span>
-                        <span className="font-bold text-slate-900">Rp {(laundryVolume * 6000 * 30).toLocaleString("id-ID")}/bulan</span>
-                      </div>
-                    </div>
-
-                    {/* Pengeluaran */}
-                    <div className="py-3 space-y-2">
-                      <span className="font-bold text-[10px] text-slate-400 uppercase tracking-widest block">Pengeluaran:</span>
-                      
-                      <div className="flex justify-between text-slate-600">
-                        <span>Listrik, Air & Gas</span>
-                        <span className="font-bold">Rp {Math.round(1800000 * (laundryVolume / 50)).toLocaleString("id-ID")}</span>
-                      </div>
-                      
-                      <div className="flex justify-between text-slate-600">
-                        <span>Parfum & Plastik</span>
-                        <span className="font-bold">Rp {Math.round(700000 * (laundryVolume / 50)).toLocaleString("id-ID")}</span>
-                      </div>
-
-                      <div className="flex justify-between text-slate-600">
-                        <span>Gaji 1 Karyawan</span>
-                        <span className="font-bold">Rp 1.500.000</span>
-                      </div>
-
-                      <div className="flex justify-between text-slate-800 pt-2 font-bold border-t border-slate-100/50">
-                        <span>Total Pengeluaran</span>
-                        <span className="text-red-600">- Rp {(Math.round(1800000 * (laundryVolume / 50)) + Math.round(700000 * (laundryVolume / 50)) + 1500000).toLocaleString("id-ID")}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Full-width Laba Bersih Box */}
-                <div className="mt-auto bg-blue-900 text-white p-4 rounded-xl text-center shadow-sm">
-                  <span className="text-[9px] font-bold tracking-widest uppercase text-blue-200 block mb-1">
-                    ESTIMASI LABA BERSIH
-                  </span>
-                  <span className="text-base sm:text-lg font-black tracking-tight block">
-                    Rp {(laundryVolume * 6000 * 30 - (Math.round(1800000 * (laundryVolume / 50)) + Math.round(700000 * (laundryVolume / 50)) + 1500000)).toLocaleString("id-ID")} / BULAN
-                  </span>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
@@ -518,7 +397,7 @@ export default function Home() {
                 </div>
                 {/* Quote Text */}
                 <p className="text-slate-600 italic text-xs sm:text-sm leading-relaxed mb-6">
-                  "Alhamdulillah usaha laundry saya sudah jalan 2 bulan. Omset stabil setiap hari, terima kasih SteamPro.id."
+                  "Alhamdulillah usaha laundry saya sudah jalan 2 bulan. Omset stabil setiap hari, terima kasih TukangLaundry.co.id."
                 </p>
               </div>
 
@@ -616,7 +495,7 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-4">
                 <Cloud className="w-5 h-5 text-white" />
                 <span className="text-lg font-bold tracking-tight text-white">
-                  SteamPro.id
+                  TukangLaundry.co.id
                 </span>
               </div>
               <p className="text-slate-300 max-w-sm leading-relaxed text-xs">
@@ -636,14 +515,14 @@ export default function Home() {
               <h4 className="font-bold text-white text-xs tracking-wider uppercase mb-4">Kontak</h4>
               <p className="leading-relaxed text-xs text-slate-300">
                 Jl. Raya Laundry No. 88, Jawa Timur<br />
-                WhatsApp: +62 812-3456-7890<br />
-                Email: info@steampro.id
+                WhatsApp: 089678449424<br />
+                Email: info@tukanglaundry.co.id
               </p>
             </div>
           </div>
           
           <div className="border-t border-blue-950 pt-8 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-300 gap-4">
-            <p>© {new Date().getFullYear()} SteamPro.id. Hak Cipta Dilindungi.</p>
+            <p>© {new Date().getFullYear()} TukangLaundry.co.id. Hak Cipta Dilindungi.</p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-white">Syarat & Ketentuan</a>
               <a href="#" className="hover:text-white">Kebijakan Privasi</a>
@@ -661,8 +540,10 @@ export default function Home() {
         </div>
         
         {/* Floating Circle Button */}
-        <button
-          onClick={() => handleWhatsAppClick()}
+        <a
+          href="https://wa.me/6289678449424"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center relative border border-emerald-400/20"
         >
           <MessageSquare className="w-5 h-5 fill-white/10" />
@@ -670,7 +551,7 @@ export default function Home() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500 text-[9px] text-white font-bold items-center justify-center">1</span>
           </span>
-        </button>
+        </a>
       </div>
 
     </div>

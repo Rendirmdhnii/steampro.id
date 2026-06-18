@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SteamPro.id - Pusat Paket Usaha Setrika Uap & Laundry",
+  title: "TukangLaundry.co.id - Pusat Paket Usaha Setrika Uap & Laundry",
   description: "Penyedia mesin cuci industri, paket boiler setrika uap, perlengkapan laundry kiloan & satuan lengkap, bergaransi resmi, dan berkualitas tinggi di Indonesia.",
 };
 
