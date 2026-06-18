@@ -20,7 +20,7 @@ export default function Home() {
   const faqs = [
     {
       question: "Apakah peralatan setrika uap & laundry sudah siap pakai?",
-      answer: "Ya, betul sekali. Semua paket usaha dari TukangLaundry.co.id sudah dirancang dengan konsep 'Plug and Play'. Kami menyediakan semua peralatan lengkap, instalasi awal, parfum, deterjen, serta panduan operasional agar Anda dapat langsung memulai usaha tanpa ribet."
+      answer: "Ya, betul sekali. Semua paket usaha dari SteamPro.id sudah dirancang dengan konsep 'Plug and Play'. Kami menyediakan semua peralatan lengkap, instalasi awal, parfum, deterjen, serta panduan operasional agar Anda dapat langsung memulai usaha tanpa ribet."
     },
     {
       question: "Bagaimana dengan pengiriman dan instalasi ke luar kota?",
@@ -43,7 +43,7 @@ export default function Home() {
               <Cloud className="w-5 h-5" />
             </div>
             <span className="text-lg font-extrabold tracking-tight text-blue-900">
-              TukangLaundry.co.id
+              SteamPro.id
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm font-bold text-slate-600">
@@ -72,7 +72,7 @@ export default function Home() {
           {/* Logo Placeholder */}
           <div className="flex items-center justify-center gap-2 mb-6">
             <Cloud className="w-8 h-8 text-blue-900" />
-            <span className="text-2xl font-black tracking-tight text-blue-900">TukangLaundry.co.id</span>
+            <span className="text-2xl font-black tracking-tight text-blue-900">SteamPro.id</span>
           </div>
 
           {/* Judul Utama */}
@@ -285,7 +285,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
             <h2 className="text-xs font-black uppercase tracking-widest text-blue-900 mb-2">SIMULASI OMSET</h2>
-            <p className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Simulasi Usaha Laundry</p>
+            <p className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">SIMULASI PENDAPATAN STEAMPRO.ID</p>
           </div>
 
           {/* Single Large Card */}
@@ -294,20 +294,37 @@ export default function Home() {
               SIMULASI USAHA LAUNDRY
             </div>
             <div className="p-5 sm:p-8 space-y-6 flex-1 flex flex-col">
-              <div className="text-center bg-slate-50 p-4 rounded-xl border border-slate-100">
-                <p className="text-xs sm:text-sm md:text-base font-extrabold text-blue-900">
-                  Target 80kg/hari | Harga Jual Rp 7.000/kg | 30 Hari Kerja
-                </p>
+              {/* Asumsi Operasional */}
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <h3 className="text-xs font-black uppercase tracking-widest text-blue-900 mb-2 text-center">Asumsi Operasional</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center text-xs sm:text-sm">
+                  <div>
+                    <span className="text-slate-500 block">Target Harian</span>
+                    <span className="font-bold text-slate-800">80 kg / hari</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-500 block">Harga Kiloan</span>
+                    <span className="font-bold text-slate-800">Rp 7.000 / kg</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-500 block">Jam Kerja</span>
+                    <span className="font-bold text-slate-800">12 Jam (2 Shift)</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-500 block">Hari Kerja</span>
+                    <span className="font-bold text-slate-800">30 Hari</span>
+                  </div>
+                </div>
               </div>
 
               {/* Pemasukan & Pengeluaran Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-100">
                 {/* Rincian Pemasukan */}
                 <div className="space-y-4">
-                  <h3 className="text-xs font-black uppercase tracking-widest text-emerald-600">Rincian Pemasukan</h3>
+                  <h3 className="text-xs font-black uppercase tracking-widest text-emerald-600">Rincian Total Pemasukan</h3>
                   <div className="space-y-3 text-xs sm:text-sm">
                     <div className="flex justify-between">
-                      <span className="text-slate-600">Pemasukan Kiloan</span>
+                      <span className="text-slate-600">Pemasukan Kiloan (Rp 560.000 x 30 Hari)</span>
                       <span className="font-bold text-slate-900">Rp 16.800.000</span>
                     </div>
                     <div className="flex justify-between">
@@ -315,7 +332,7 @@ export default function Home() {
                       <span className="font-bold text-slate-900">Rp 6.000.000</span>
                     </div>
                     <div className="flex justify-between border-t border-slate-100 pt-3 font-extrabold text-slate-800">
-                      <span>Total Pemasukan</span>
+                      <span>TOTAL PEMASUKAN</span>
                       <span className="text-blue-900">Rp 22.800.000</span>
                     </div>
                   </div>
@@ -323,15 +340,27 @@ export default function Home() {
 
                 {/* Rincian Pengeluaran */}
                 <div className="space-y-4 pt-6 md:pt-0 md:pl-6">
-                  <h3 className="text-xs font-black uppercase tracking-widest text-red-600">Rincian Pengeluaran</h3>
+                  <h3 className="text-xs font-black uppercase tracking-widest text-red-600">Rincian Biaya Operasional</h3>
                   <div className="space-y-3 text-xs sm:text-sm">
-                    <div className="flex justify-between gap-4">
-                      <span className="text-slate-600 leading-tight">Total Pengeluaran</span>
-                      <span className="font-bold text-red-600 shrink-0">Rp 13.730.000</span>
+                    <div className="flex justify-between">
+                      <span className="text-slate-600">Gaji Karyawan (4 Orang)</span>
+                      <span className="font-bold text-slate-900">Rp 6.000.000</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-600">Sewa Tempat / Bulan</span>
+                      <span className="font-bold text-slate-900">Rp 2.000.000</span>
+                    </div>
+                    <div className="flex justify-between leading-tight">
+                      <span className="text-slate-600">Biaya Lain-lain</span>
+                      <span className="font-bold text-slate-900 text-right">Rp 5.730.000</span>
                     </div>
                     <p className="text-[10px] text-slate-400 italic leading-tight">
-                      (Termasuk biaya operasional: Listrik, Air, Gaji 4 Karyawan, Sewa Tempat, dll)
+                      (Listrik, Air, Internet, Gas, Detergen, Plastik, Depresiasi)
                     </p>
+                    <div className="flex justify-between border-t border-slate-100 pt-3 font-extrabold text-slate-800">
+                      <span>TOTAL PENGELUARAN</span>
+                      <span className="text-red-600">Rp 13.730.000</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -397,7 +426,7 @@ export default function Home() {
                 </div>
                 {/* Quote Text */}
                 <p className="text-slate-600 italic text-xs sm:text-sm leading-relaxed mb-6">
-                  "Alhamdulillah usaha laundry saya sudah jalan 2 bulan. Omset stabil setiap hari, terima kasih TukangLaundry.co.id."
+                  "Alhamdulillah usaha laundry saya sudah jalan 2 bulan. Omset stabil setiap hari, terima kasih SteamPro.id."
                 </p>
               </div>
 
@@ -495,7 +524,7 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-4">
                 <Cloud className="w-5 h-5 text-white" />
                 <span className="text-lg font-bold tracking-tight text-white">
-                  TukangLaundry.co.id
+                  SteamPro.id
                 </span>
               </div>
               <p className="text-slate-300 max-w-sm leading-relaxed text-xs">
@@ -516,13 +545,13 @@ export default function Home() {
               <p className="leading-relaxed text-xs text-slate-300">
                 Jl. Raya Laundry No. 88, Jawa Timur<br />
                 WhatsApp: 089678449424<br />
-                Email: info@tukanglaundry.co.id
+                Email: info@steampro.id
               </p>
             </div>
           </div>
           
           <div className="border-t border-blue-950 pt-8 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-300 gap-4">
-            <p>© {new Date().getFullYear()} TukangLaundry.co.id. Hak Cipta Dilindungi.</p>
+            <p>© {new Date().getFullYear()} SteamPro.id. Hak Cipta Dilindungi.</p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-white">Syarat & Ketentuan</a>
               <a href="#" className="hover:text-white">Kebijakan Privasi</a>
